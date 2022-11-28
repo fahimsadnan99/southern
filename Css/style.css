@@ -1,0 +1,859 @@
+/* ------GOOGLE FONT ----- */
+
+@font-face {
+    font-family: Courgette;
+    src: url("../Font/ElMessiri-VariableFont_wght.ttf");
+}
+@font-face {
+    font-family: PatuaOne;
+    src: url("../Font/PatuaOne-Regular.ttf");
+}
+
+
+/* -----MAIN CSS---- */
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+::-webkit-scrollbar {
+    width: 0.8rem;
+}
+
+::-webkit-scrollbar-track {
+    background-color: rgba(0, 0, 0, 0.548);
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #295AD9;
+    border-radius: 0.5rem;
+    border: 2px solid transparent;
+    background-clip: content-box;
+    box-shadow: 2px 5px 10px rgb(44, 44, 44);
+}
+
+
+/* -----REUSE ITEM---------- */
+
+
+.borderBottom {
+    display: block;
+    background-color: #295AD9;;
+    width: 300px;
+    height: 4px;
+    margin: 0 auto;
+    position: relative;
+    
+  }
+
+  .borderBottom::before{
+    content: ".";
+    width: 20px !important;
+    height: 20px;
+    background-color: #295AD9;;
+    display: block;
+    border-radius: 50%;
+    top: -8px;
+    left: 0;
+    position: absolute;
+    
+  }
+
+  .borderBottom::after{
+    content: ".";
+    width: 20px !important;
+    height: 20px;
+    background-color: #295AD9;;
+    display: block;
+    border-radius: 50%;
+    top: -8px;
+    right: 0;
+    position: absolute;
+    
+  }
+
+/* ----------Navbar CSS START ------- */
+
+.navbar-wrapper {
+    width: 100%;
+    background-color: transparent;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.178);
+    position: relative;
+    position: fixed;
+    z-index: 999;
+    
+}
+
+.logo {
+    width: 60px;
+    border-radius: 50%;
+}
+.logoTxt {
+  font-family: Courgette !important;
+    font-size: 30px;
+    font-weight: bold;
+    margin-left: 12px;
+    position: absolute;
+    top: -35px;
+    left: 60px;
+    color: #295AD9;
+    text-shadow: 5px 1px 0px rgba(94, 255, 0, 0.253);
+    font-weight: 700;
+    animation: textAnimate 3s linear infinite;
+    font-weight: 700 !important;
+}
+
+@keyframes textAnimate {
+    0% {
+      text-shadow: 5px 1px 0px rgba(0, 0, 0, 0.253); 
+    }
+    30% {
+      text-shadow: -5px -5px 5px rgba(0, 0, 0, 0.253); 
+    }
+    60% {
+      text-shadow: 5px 5px 5px rgba(0, 0, 0, 0.253); 
+    }
+    100% {
+      text-shadow: 5px 1px 0px rgba(0, 0, 0, 0.253); 
+    }
+  }
+.navList li a{
+      padding: 10px 15px;
+      text-decoration: none;
+      font-family: PatuaOne;
+      font-weight: bold;
+      font-size: 20px;
+      color: #295AD9;
+}
+
+
+/* ----------Navbar CSS ENd ------- */
+
+
+/* -----------BANNER CSS START --------- */
+
+.bannerSection {
+    width: 100%;
+  height: 100vh;
+  float: left;
+  background:linear-gradient(0deg, rgba(0, 0, 0, 0.111) 0%,rgba(0, 0, 0, 0.193)100%), url("../img/banner_auto_x2.jpg");
+  background-size: cover;
+  background-position: center;
+  position: relative;
+ 
+}
+
+.bannerSection p {
+    font-size: 55px;
+    color:  #C7C8CC;
+    position: absolute;
+    top: 40%;
+    left: 15%;
+    font-family: PatuaOne;
+    font-weight: bold;
+    position: relative;
+    overflow: hidden;
+    text-shadow:
+    0 1px 0px #000000,
+    1px 0 0px #494b4d,
+    1px 2px 1px #474e52,
+    2px 1px 1px #10191d,
+    2px 3px 2px #10415a,
+    3px 2px 2px #5dabcd,
+    3px 4px 2px #378ab4,
+    4px 3px 3px #5dabcd,
+    4px 5px 3px #378ab4,
+    5px 4px 2px #5dabcd,
+    5px 6px 2px #378ab4,
+    6px 5px 2px #5dabcd,
+    6px 7px 1px #378ab4,
+    7px 6px 1px #5dabcd,
+    7px 8px 0px #378ab4,
+    8px 7px 0px #5dabcd;
+    width: 1000px;
+
+}
+
+
+.bannerSection p::before {
+    content: "Knowledge Has A Beginning But No End";
+ 
+    color : #87BD42 !important;
+    position: absolute;
+    width: 800px;;
+    top: 0;
+    left: 0;
+    border-right: 0.1rem solid #fff;
+   animation  : sliderAnimation 5s linear infinite;
+    overflow: hidden !important;
+  }
+  
+   @keyframes sliderAnimation {
+    0%{
+       width: 0px;
+       text-shadow:
+       0 1px 0px #73b437,
+       1px 0 0px #6c25af,
+       1px 2px 1px #2f0474,
+       2px 1px 1px #5dabcd,
+       2px 3px 2px #378ab4,
+       3px 2px 2px #5dabcd,
+       3px 4px 2px #378ab4,
+       4px 3px 3px #5dabcd,
+       4px 5px 3px #378ab4,
+       5px 4px 2px #5dabcd,
+       5px 6px 2px #378ab4,
+       6px 5px 2px #5dabcd,
+       6px 7px 1px #378ab4,
+       7px 6px 1px #5dabcd,
+       7px 8px 0px #378ab4,
+       8px 7px 0px #5dabcd;
+    }
+    50%{
+      width: 100%;
+      text-shadow:
+      0 1px 0px #73b437,
+      1px 0 0px #6c25af,
+      1px 2px 1px #2f0474,
+      2px 1px 1px #5dabcd,
+      2px 3px 2px #378ab4,
+      3px 2px 2px #5dabcd,
+      3px 4px 2px #378ab4,
+      4px 3px 3px #5dabcd,
+      4px 5px 3px #378ab4,
+      5px 4px 2px #5dabcd,
+      5px 6px 2px #378ab4,
+      6px 5px 2px #5dabcd,
+      6px 7px 1px #378ab4,
+      7px 6px 1px #5dabcd,
+      7px 8px 0px #378ab4,
+      8px 7px 0px #5dabcd;
+    }
+    100%{
+      width: 0%;
+      text-shadow:
+      0 1px 0px #73b437,
+      1px 0 0px #6c25af,
+      1px 2px 1px #2f0474,
+      2px 1px 1px #5dabcd,
+      2px 3px 2px #378ab4,
+      3px 2px 2px #5dabcd,
+      3px 4px 2px #378ab4,
+      4px 3px 3px #5dabcd,
+      4px 5px 3px #378ab4,
+      5px 4px 2px #5dabcd,
+      5px 6px 2px #378ab4,
+      6px 5px 2px #5dabcd,
+      6px 7px 1px #378ab4,
+      7px 6px 1px #5dabcd,
+      7px 8px 0px #378ab4,
+      8px 7px 0px #5dabcd;
+    }
+  } 
+
+
+  /* -----------BANNER CSS END --------- */
+
+
+  /* -----------SELECTION CSS START --------- */
+
+  .wrapperSelection {
+    /* position: relative; */
+    /* background-image: url("./img/featureBg.png"); */
+/* 
+   background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover; */
+    height: 100%;
+    width: 100%;
+    background-color: rgb(255, 255, 255) !important;
+    
+
+  }
+   .postionSelector {
+    /* position: absolute;
+    top: 570px;
+    left: 15%; */
+   position: relative;
+  
+  }
+  .postionSelector .top  {
+    text-align: center;
+    background-color: rgb(36, 10, 54);
+    color: #fff;
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    font-size: 18px;
+    position: relative;
+    transition: all 0.5s;
+    z-index: 0;
+    margin: 20px;
+    position : absolute;
+    top: -200px;
+    
+  }
+ .top p {
+      padding-top: 80px;
+      
+ }
+
+ .top {
+  box-shadow: 2px 5px 10px rgba(0, 0, 0, 0.438);
+ }
+ .top::before {
+    position: absolute;
+    content: "";
+    background-color: transparent;
+    width: 180px;
+    height: 180px;
+    left: 0;
+    border: 10px solid #295AD9;
+    border-radius: 50%;
+    z-index: 2;
+   
+}
+
+.top .topImg {
+    position: absolute;
+    top: 10px;
+    left: 9.5px;
+    width: 160px;
+    height: 160px;
+    background-color: #99fafa;
+    border: 9px solid white !important;
+    border-radius: 50%;
+    z-index: 1;
+    
+    
+}
+.topImg {
+    width: 100%;
+ 
+    transition: all 0.5s;
+}
+
+.top:hover > .topImg {
+    top : -60%;
+    transition: all 0.5s;
+}
+.topDownText {
+    font-weight: bold;
+    font-size: 18px;
+    text-align: center;
+    color: #474e52;
+}
+
+.topImg img {
+  /* animation: imgAnimate 2s linear infinite; */
+  filter: drop-shadow(4px 4px 5px rgba(0, 0, 0, 0.329));
+}
+
+@keyframes imgAnimate { 
+  0% {
+    transform: scale(0.5)
+  }
+  50% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(0.5);
+  }
+}
+  /* -----------SELECTION CSS START --------- */
+
+  .wrapper-Facet {
+    
+    padding-top: 20px;
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.6) 0%, rgba(0, 0, 0, 0.6)), url("../img/area.jpg");
+    width: 100%;
+    height: auto;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: left;
+    padding-bottom: 80px;
+    
+    
+  }
+
+  .wrapper-Facet .facetText {
+    font-size: 30px;
+    color: #295AD9;
+    font-family: PatuaOne;
+    font-weight: bold;
+    padding-top: 60px;
+    color: #fff !important;
+  
+  }
+
+.NumberText {
+    font-size: 40px;
+    font-weight: bold;
+    color: #295AD9;
+    margin: 0px !important;
+    color: #fff !important;
+}
+
+.NumberTextBorder { 
+    background-color:  #295AD9;
+    width: 80px ;
+    height: 5px ;
+    display: block;
+    margin: 0 auto ;
+
+}
+
+.descriptionFact {
+    font-size: 30px;
+    font-weight: bold;
+    margin-top: 30px;
+    color : #295AD9;
+    color: #fff !important;
+}
+
+  /* -----------SELECTION CSS END --------- */
+
+
+    /* -----------FECULTY SELECTION CSS START --------- */
+  .FacultyWrapper {
+    background-color: #ffffff54;
+  }
+    .fecultryHeading {
+      font-size: 30px;
+      color: #295AD9;
+      font-family: PatuaOne;
+      font-weight: bold;
+      padding-top: 60px;
+      text-shadow: 0px 5px 10px  rgba(250, 250, 250, 0.192);
+      
+     
+    }
+
+    
+    .prfileCardWrapper {
+       border-radius: 0px 40px 0px 40px;
+       padding: 0px 20px;
+       box-shadow: 2px 1px 10px #3a3b3b;
+       margin: 70px 0px;
+       width: 300px !important;
+       font-family: PatuaOne;
+       color: #000000;
+       box-shadow: 0px 5px 20px  rgb(11, 13, 156);
+       margin-bottom: 100px;
+       /* From https://css.glass */
+background: rgba(255, 255, 255, 0.2);
+/* border-radius: 16px; */
+box-shadow: 0 10px 10px rgba(10, 10, 10, 0.329);
+backdrop-filter: blur(5px);
+-webkit-backdrop-filter: blur(5px);
+border: 1px solid rgba(255, 255, 255, 0.3);
+    }
+
+    .prfileCardWrapper::after {
+      background-color: rgba(38, 0, 255, 0.507);
+      border-radius: 0px 10px 10px 0px;
+      width: 20px;
+      height: 30px;
+      content: "";
+      position: absolute;
+      top: 110px;
+      right: 0;
+      z-index: -1;
+      
+    }
+    .prfileCard {
+      background: #295AD9 !important;
+      border-radius: 0px 40px 0px 40px;
+      width: 100%;
+      height: 120px;
+      position: relative;
+      
+
+    }
+  
+    .prfileCard img {
+      width: 120px;
+      height: 120px;
+      position: absolute;
+      top: -30%;
+      left: 30%;
+      border: 4px solid #295AD9;
+      /* box-shadow: 2px 1px 10px #3a3b3b; */
+      border-radius: 50%;
+;
+    }
+ 
+    .prfileCardDescription p {
+      /* text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.322); */
+    }
+    .prfileCardDescription .Pname {
+      padding: 0;
+      margin: 0;
+      font-size: 20px;
+      font-weight: bold;
+      text-align: left;
+      padding: 0px 10px;
+      padding-top: 20px;
+    }
+    .prfileCardDescription .Pd {
+      font-style: italic;
+      color: #295AD9;
+      font-size: 20px;
+      font-weight: bold;
+      
+    }
+
+    .prfileCardDescription .Pm , .Pnumber{
+      
+      font-size: 16px;
+      font-weight: bold;
+      text-align: left;
+      padding: 0px 10px
+      
+    }
+      /* -----------FECULTY SELECTION CSS END --------- */
+
+
+     /* -----------Mission SELECTION CSS Start --------- */
+     .missionWrapper {
+      background: linear-gradient(0deg, rgba(0,0,0,0.7) 0%, rgba(0,0,0,0.7)), url("../img/missonBg.jpg");
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: cover;
+      position: inherit;
+      width: 100%;
+      padding: 50px 0px;
+      padding-top: 80px;
+
+     }
+     .missionContent {
+      width: 50%;
+      height: 100vh;
+      /* overflow: hidden; */
+      background-color: transparent;
+      border-right: 8px solid #fdfdfd;
+      position: relative;
+      margin-top: 70px;
+
+     }
+     .missionContent .missionContentBefore {
+      width: 20px;
+      height: 20px;
+      background-color: #ffffff;
+      border-radius: 50%;
+      border: 20px #ffffff;
+      position: absolute;
+      top: -0.5%;
+      left: 98.9%;
+      
+     }
+     
+     .missionContentAfter {
+      width: 20px;
+      height: 20px;
+      background-color: #ffffff;
+      border-radius: 50%;
+      border: 20px #ffffff;
+      position: absolute;
+      bottom: -0.5%;
+      left: 98.9%;
+      
+     }
+
+     .missionText {
+      font-size: 30px;
+      font-weight: bold;
+      color: #fff;
+      font-family: PatuaOne;
+     }
+
+     .missionContent .mission1 ,  .missionContent .mission2,.missionContent .mission3 , .missionContent .mission4 ,.missionContent .mission5 , .missionContent .mission6,.missionContent .mission7  {
+      background-color: #000000;
+      color: #fff;
+      padding: 15px 20px;
+      font-size: 20px;
+      text-align: center;
+      width: 400px;
+      border-radius: 10px;
+      position: absolute;
+      top: 30px;
+      left : 0;
+      
+      /* From https://css.glass */
+background: rgba(255, 255, 255, 0.2);
+border-radius: 16px;
+box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+backdrop-filter: blur(5px);
+-webkit-backdrop-filter: blur(5px);
+border: 1px solid rgba(255, 255, 255, 0.3);
+     }
+
+     .missionContent .mission1::after, .missionContent .mission2::after,.missionContent .mission3::after,.missionContent .mission4::after,.missionContent .mission5::after,.missionContent .mission6::after,.missionContent .mission7::after {
+      content: "";
+      position: absolute;
+      background-color: white;
+      width: 38%;
+      height: 5px;
+      top: 30px;
+      left: 100%;
+     }
+
+
+     .missionContent .mission1::before ,.missionContent .mission2::before,.missionContent .mission3::before,.missionContent .mission4::before,.missionContent .mission5::before,.missionContent .mission6::before,.missionContent .mission7::before {
+      content: "";
+      position: absolute;
+      background-color: white;
+      width: 20px;
+      height: 20px;
+      top: 22px;
+      left: 97.5%;
+      border-radius: 50%;
+     }
+
+     .missionContent .mission2  {
+      top: 110px;
+      left : 700px !important;
+     }
+
+     .missionContent .mission2::after,.missionContent .mission4::after,.missionContent .mission6::after {
+      left: -38% !important;
+     }
+
+     .missionContent .mission2::before,.missionContent .mission4::before,.missionContent .mission6::before {
+      left: -2%!important;
+
+     }
+
+     .missionContent .mission3 {
+      top: 200px;
+      left : 0 !important;
+     }
+
+
+     .missionContent .mission4 {
+      top: 290px;
+      left : 700px !important;
+     }
+
+     .missionContent .mission5 {
+      top: 380px;
+      left : 0!important;
+     }
+
+     .missionContent .mission6 {
+      top: 460px;
+      left : 700px !important;
+     }
+
+     .missionContent .mission7 {
+      top: 550px;
+      left : 0!important;
+     }
+    /* -----------Mission SELECTION CSS END --------- */
+
+
+
+  /* -----------EVENT SELECTION CSS START --------- */
+
+  
+  .eventWrapper {
+    padding: 30px 0px;
+    text-align: center;
+  }
+
+  .eventContent {
+    position: relative;
+    box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.295) !important;
+    border-radius: 5px;
+  }
+ 
+  .eventContent img {
+    border-radius: 5px;
+    width: 100%;
+    height: 300px;
+
+  }
+  .eventContent .eventContentTitle ,  .eventContent .eventContentTitle1 , .eventContent .eventContentTitle3, .eventContent .eventContentTitle4 {
+    -webkit-clip-path: polygon(100% 0%, 89% 50%, 100% 100%, 0 100%, 0% 50%, 0 0);
+    clip-path: polygon(100% 0%, 89% 50%, 100% 100%, 0 100%, 0% 50%, 0 0);
+    
+    
+background-color: #e01818;
+width: 250px;
+text-align: start;
+padding: 5px;
+color: white;
+position: absolute;
+top: 20px;
+left: 0;
+font-weight: bold;
+text-shadow: 5px 5px  10px black !important;
+
+}
+
+.eventContent  .eventContentDescription {
+  background: #295AD9;
+border-radius: 5px;
+box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+backdrop-filter: blur(5px);
+-webkit-backdrop-filter: blur(5px);
+/* border: 1px solid rgba(255, 0, 0, 0.774); */
+position: absolute;
+bottom: 20px;
+left: 0;
+margin: 0 20px;
+text-align: start;
+padding: 10px;
+color: white;
+cursor: pointer;
+box-shadow: 3px 5px 10px black !important;
+
+}
+
+.eventContent .eventContentTitle1 {
+  width: 300px;
+}
+
+.eventContent .eventContentTitle3 , .eventContent .eventContentTitle4 {
+  width: 190px;
+}
+
+.eventBtn {
+  width: 200px;
+  background-color: #e01818;
+  color: #fff !important;
+  /* font-weight: bold; */
+  font-size: 20px;
+  font-family: PatuaOne;
+  box-shadow: 0px 2px 10px black;
+  text-shadow: 5px 5px  10px black !important;
+}
+      
+  /* -----------EVENT SELECTION CSS END --------- */
+
+  /* -----------NEWS SELECTION CSS Start --------- */
+ .newsWrapper {
+  background-color: #1354582a;
+ }
+
+   /* -----------NEWS SELECTION CSS END --------- */
+
+   /* -----------AFFLIATIONS SELECTION CSS Start --------- */
+
+   .affiliate-Wrapper {
+    padding-bottom: 50px;
+   }
+   .affiliateTitle {
+    font-size: 30px;
+    color: #295AD9;
+    font-family: PatuaOne;
+    text-align: center;
+    margin-top: 50px;
+   }
+
+  
+   .AFFLIATIONS div {
+    margin: 10px 0px;
+    
+   }
+
+   .AFFLIATIONS div  img {
+    border-radius: 16px;
+    width: 130px;
+    /* height: 100px; */
+    border: none;
+    outline: none;
+    background-color: #e0e5ec;
+    box-shadow: -7px -7px 20px 0px #fff9,
+    -4px -4px 5px 0px #fff9,
+    7px 7px 20px 0px #0002,
+    4px 4px 5px 0px #0001,
+    inset 0px 0px 0px 0px #fff9,
+    inset 0px 0px 0px 0px #0001,
+    inset 0px 0px 0px 0px #fff9,
+    inset 0px 0px 0px 0px #0001;
+   }
+
+   /* -----------AFFLIATIONS SELECTION CSS END --------- */
+
+ /* -----------Footer SELECTION CSS START --------- */
+
+ .footerWrapper {
+  background-color: #10191d;
+  color: #fff;
+  padding: 50px 0px;
+ } 
+
+ .FooterTitle {
+  font-size: 24px;
+  font-weight: bold;
+ }
+
+ .footerWrapper .footerDescription a {
+  display: block !important;
+  color: #fff;
+  text-decoration: none;
+  margin-top: 5px;
+ }
+
+
+
+ 
+#apple,
+#twitter,
+#github,
+#facebook {
+  font-size: 1rem;
+  background-color: #18191f;
+  color: #fff;
+  box-shadow: 2px 2px 2px #00000080, 10px 1px 12px #00000080,
+    2px 2px 10px #00000080, 2px 2px 3px #00000080, inset 2px 2px 10px #00000080,
+    inset 2px 2px 10px #00000080, inset 2px 2px 10px #00000080,
+    inset 2px 2px 10px #00000080;
+  border-radius: 10px;
+  padding: 11px 19px;
+  margin: 20px 2px;
+  animation: animate 2s linear infinite;
+  text-shadow: 0 0 50px #0072ff, 0 0 100px #0072ff, 0 0 150px #0072ff,
+    0 0 200px #0072ff;
+}
+#twitter {
+  animation-delay: 0.3s;
+}
+#facebook {
+  animation-delay: 0.7s;
+}
+#github {
+  animation-delay: 0.1s;
+}
+
+@keyframes animate {
+  from {
+    filter: hue-rotate(0deg);
+  }
+  to {
+    filter: hue-rotate(360deg);
+  }
+}
+
+/* -----------Footer SELECTION CSS END --------- */
+
+
+/* -----------CopyRight SELECTION CSS Start --------- */
+
+.copyRight {
+  background-color: #000000;
+  color: #ffffff;
+  text-align: center;
+  padding: 10px;
+  font-size: 14px;
+}
+/* -----------CopyRight SELECTION CSS End --------- */
+
+
+
+.courseWrapper {
+  padding-top: 150px !important;
+}
