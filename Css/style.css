@@ -857,3 +857,61 @@ box-shadow: 3px 5px 10px black !important;
 .courseWrapper {
   padding-top: 150px !important;
 }
+
+
+
+
+/* -------------Login CSS Start ------ */
+
+.loginWrapper {
+  width: 100%;
+  height: 100vh;
+  background: linear-gradient(0deg,rgba(0,0,0,0.5) 0%, rgba(0,0,0,0.5)), url("../img//WhatsApp-Image-2022-04-05-at-12.04.49-PM.jpeg");
+  background-repeat: no-repeat;
+  background-position: center center;
+  padding-top: 180px
+
+}
+.contentWrapper {
+  /* From https://css.glass */
+background: rgba(255, 255, 255, 0.2);
+border-radius: 5px;
+box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+backdrop-filter: blur(5px);
+-webkit-backdrop-filter: blur(5px);
+border: 1px solid rgba(255, 255, 255, 0.3);
+padding: 50px 20px;
+}
+
+.contentWrapper label {
+  font-size: 20px;
+  color: #fff;
+
+}
+
+.contentWrapper  button {
+  margin-top: 20px;
+  text-align: center;
+  margin-left: 120px;
+}
+
+
+
+/* ----------Start About Css-------- */
+
+.aboutWrapper {
+  width: 100%;
+  height: 100vh;
+}
+
+/* ----------End About Css-------- */
+
+
+/* ----------Start Gallay Css-------- */
+
+.gallaryWrapper {
+  width: 100%;
+  height: 100vh;
+}
+
+/* ----------End Gallary Css-------- */
